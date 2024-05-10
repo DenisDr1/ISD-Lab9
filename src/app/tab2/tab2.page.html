@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Prism Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Base</ion-label>
+    <ion-input type="number" [(ngModel)]="base"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Height</ion-label>
+    <ion-input type="number" [(ngModel)]="height"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Length</ion-label>
+    <ion-input type="number" [(ngModel)]="length"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="calculate()">Calculate</ion-button>
+
+  <ion-item *ngIf="volume || area">
+    <ion-label>Volume: {{ volume }}</ion-label>
+    <ion-label>Area: {{ area }}</ion-label>
+  </ion-item>
+</ion-content>
